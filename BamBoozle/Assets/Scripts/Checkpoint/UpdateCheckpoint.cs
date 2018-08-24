@@ -6,7 +6,7 @@ public class UpdateCheckpoint : MonoBehaviour
 {
     void OnTriggerEnter(Collider collider)
     {
-        if (collider.gameObject.name == "Player")
+        if (collider.gameObject.tag == "Player")
         {
             Detector.checkpoint = transform.position;
         }

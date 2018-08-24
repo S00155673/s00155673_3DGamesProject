@@ -23,6 +23,9 @@ GameObject:
   - component: {fileID: 65232880980826242}
   - component: {fileID: 95419612319573934}
   - component: {fileID: 114464618956840024}
+  - component: {fileID: 114828073964740580}
+  - component: {fileID: 114518060979020438}
+  - component: {fileID: 114563759735821730}
   m_Layer: 0
   m_Name: Bunny
   m_TagString: Player
@@ -194,7 +197,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1073332553786456}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -567,7 +570,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!65 &65232880980826242
 BoxCollider:
@@ -610,4 +613,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 720254b438fc1714f839dcc4db3e8b9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1073332553786456}
+--- !u!114 &114518060979020438
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1073332553786456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f9ddf2cc4a1c214fb9e208005f86083, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114563759735821730
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1073332553786456}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6db6c5cb4e0fdaa43ab4757a8fbd90eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  justJumped: 0
+--- !u!114 &114828073964740580
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1073332553786456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43d54b63a89658c4f96b6a5f623cdb6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

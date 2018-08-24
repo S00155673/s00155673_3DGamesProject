@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class Detector : MonoBehaviour
 {
@@ -9,14 +11,6 @@ public class Detector : MonoBehaviour
     {
         Player = GameObject.FindWithTag("Player");
         checkpoint = Player.transform.position;
-    }
-
-    private void Update()
-    {
-        if (transform.position.y < -10f)
-        {
-            Spawn();
-        }
     }
 
     public void Spawn()
