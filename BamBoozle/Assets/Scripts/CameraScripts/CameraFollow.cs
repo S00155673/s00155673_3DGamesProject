@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
@@ -8,9 +6,9 @@ public class CameraFollow : MonoBehaviour
     public GameObject currentPlayer;
 
     //the Exit position for the camera...
-    Vector3 exitPos;
+    private Vector3 exitPos;
 
-	void Update ()
+    private void Update()
     {
         //Lerp (interpolate) between 2 positions...
         exitPos = Vector3.Lerp(gameObject.transform.position, currentPlayer.transform.position, Time.deltaTime);

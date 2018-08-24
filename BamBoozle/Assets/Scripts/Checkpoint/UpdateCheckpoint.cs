@@ -1,13 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class UpdateCheckpoint : MonoBehaviour
 {
-    void OnTriggerEnter(Collider collider)
+    private void OnTriggerEnter(Collider collider)
     {
         if (collider.gameObject.tag == "Player")
         {
+            //Update the checkpoint to be the checkpoints objects position...
             Detector.checkpoint = transform.position;
         }
     }

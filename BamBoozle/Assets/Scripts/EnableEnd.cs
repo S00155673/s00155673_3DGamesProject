@@ -1,23 +1,19 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EnableEnd : MonoBehaviour
 {
-
     public GameObject EndPanel;
     public GameObject TopPanel;
 
-    //public EventSystem System;
-
-    // Use this for initialization
-    void Start ()
+    private void Start()
     {
+        //Set to not appear...
         EndPanel.SetActive(false);
     }
 
-    void OnTriggerEnter(Collider collider)
+    private void OnTriggerEnter(Collider collider)
     {
+        //When Player Collides with "End" show and disable panels...
         if (collider.gameObject.tag == "Player")
         {
             EndPanel.SetActive(true);

@@ -13,6 +13,7 @@ public class Movement : MonoBehaviour
 
     //These are the Start and end Positions used for movement...
     private Vector3 startPos;
+
     private Vector3 endPos;
 
     //This is to check if there has been something inputed...

@@ -1,23 +1,22 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
-public class SettingsMenu : MonoBehaviour {
-
+public class SettingsMenu : MonoBehaviour
+{
     public AudioMixer Mixer;
 
-    Resolution[] resoulitonsAva;
+    private Resolution[] resoulitonsAva;
 
     public Dropdown resDropdown;
 
-    void Start()
+    private void Start()
     {
         resoulitonsAva = Screen.resolutions;
-        
+
         //Clear out options in dropdown...
-        resDropdown.ClearOptions();  
+        resDropdown.ClearOptions();
 
         //list of strings that are our options...
         List<string> options = new List<string>();
@@ -52,6 +51,7 @@ public class SettingsMenu : MonoBehaviour {
 
     public void VolumeSet(float volume)
     {
+        //For future music and sounds...
         Mixer.SetFloat("MasterVolume", volume);
     }
 

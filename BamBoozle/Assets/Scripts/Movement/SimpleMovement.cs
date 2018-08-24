@@ -1,10 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SimpleMovement : MonoBehaviour
 {
-	void Update ()
+    //This had to be made to avoid lerping issues that affected animations and log performance...
+    private void Update()
     {
         if (Input.GetButtonDown("up"))
         {

@@ -1,21 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Respawn : MonoBehaviour
 {
     private GameObject player;
-
-    // Use this for initialization
-    void Awake()
+    private void Awake()
     {
         player = GameObject.FindWithTag("Player");
     }
 
-    void OnCollisionEnter(Collision col)
+    private void OnCollisionEnter(Collision col)
     {
         if (col.gameObject.tag == "Player")
         {
+            //Respawn at last checkpoint...
             player.GetComponent<Detector>().Spawn();
         }
     }

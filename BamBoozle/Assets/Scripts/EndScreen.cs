@@ -1,32 +1,29 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class EndScreen : MonoBehaviour
 {
-
-    bool gameStopped = false;
+    private bool gameStopped = false;
     public Text FinalScore;
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
+        //Setting final score to show the score...
         FinalScore.text = Score.score.ToString();
 
         if (gameStopped == true)
         {
+            //If user presses K go to main menu...
             if (Input.GetKeyDown(KeyCode.K))
             {
                 Time.timeScale = 1f;
                 SceneManager.LoadScene("MainMenu");
-                
             }
         }
     }
 
-    void OnTriggerEnter(Collider collider)
+    private void OnTriggerEnter(Collider collider)
     {
         if (collider.gameObject.tag == "Player")
         {
@@ -36,7 +33,6 @@ public class EndScreen : MonoBehaviour
                 Time.timeScale = 0f;
                 Debug.Log("Stopped");
             }
-
             else if (gameStopped == true)
             {
                 gameStopped = false;
