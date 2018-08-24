@@ -23,8 +23,10 @@ public class Movement : MonoBehaviour
 
     private void Update()
     {
+        //transform.rotation = Quaternion.identity;
+
         //Here its checking to see if the buttons up,down,left,right are being hit...
-        if (Input.GetButtonDown("up")   ||
+        if (Input.GetButtonDown("up") ||
             Input.GetButtonDown("down") ||
             Input.GetButtonDown("left") ||
             Input.GetButtonDown("right"))
