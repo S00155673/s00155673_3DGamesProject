@@ -1,22 +1,22 @@
-﻿//using System.Collections;
-//using System.Collections.Generic;
-//using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-//public class Respawn : MonoBehaviour
-//{
-//    public GameObject player;
+public class Respawn : MonoBehaviour
+{
+    private GameObject player;
 
-//    // Use this for initialization
-//    void Awake()
-//    {
-//        player = GameObject.FindWithTag("Player");
-//    }
+    // Use this for initialization
+    void Awake()
+    {
+        player = GameObject.FindWithTag("Player");
+    }
 
-//    void OnCollisionEnter(Collision col)
-//    {
-//        if (col.gameObject.tag == "Player")
-//        {
-//            player.GetComponent<Detector>().Spawn();
-//        }
-//    }
-//}
+    void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            player.GetComponent<Detector>().Spawn();
+        }
+    }
+}
