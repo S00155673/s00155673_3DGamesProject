@@ -7,7 +7,7 @@ public class Score : MonoBehaviour
 {
 
     public GameObject Player;
-    public int score;
+    public static int score;
     public Text scoreText;
     public bool moved;
 

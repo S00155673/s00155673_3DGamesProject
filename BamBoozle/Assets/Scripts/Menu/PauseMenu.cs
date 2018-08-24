@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour {
 
     public static bool IsPasued = false;
+    public GameObject EndPanel;
 
     public GameObject pauseMenuPanel;
 
@@ -14,6 +15,7 @@ public class PauseMenu : MonoBehaviour {
         {
             if (IsPasued)
             {
+                EndPanel.SetActive(false);
                 Resume();
             }
             else
